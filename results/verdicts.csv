@@ -1,0 +1,23 @@
+key,name,judged_on,window,costed,verdict,why,breakeven_cost
+#1,"Trend following, 8 ETF markets, long/short",after,2012-06 to 2026-08,True,holds up,,
+#1 flat,"Trend following, long or cash only",after,2012-06 to 2026-08,True,holds up,,
+#2,Index trend filter (10-month average),after,2007-02 to 2026-08,True,holds up,,
+#2+#8,#2 with turn-of-month layer,after,2007-02 to 2026-08,True,holds up,,
+#3,"Stock momentum, top tenth",after,1993-04 to 2026-08,False,holds up,,0.03281229026002295
+#4,"Momentum, volatility-scaled, long-only",after,2015-05 to 2026-08,False,fails,Sharpe 0.70 did not beat the benchmark's 0.78,0.0
+#5,"Sector momentum, 12 industries since 1927",after,1999-09 to 2026-08,True,holds up,,
+#5 ETF,"Sector momentum, 9 real sector ETFs",after,2000-01 to 2026-08,True,holds up,,
+#6,"Low-volatility stocks, lowest fifth",after,2011-02 to 2026-08,False,holds up,,0.0016137866883539765
+#7,"Quality (operating profitability), top fifth",after,2013-05 to 2026-08,False,holds up,,0.008376751947466302
+#8,Turn of the month,after,1987-04 to 2026-08,True,fails,"Sharpe fell from 0.84 to 0.41, more than half; Sharpe 0.41 did not beat the benchmark's 0.56",
+#9 BTC,"Crypto trend, Bitcoin",after,2018-09 to 2026-08,True,fails,Sharpe 0.51 did not beat the benchmark's 0.74,
+#9 ETH,"Crypto trend, Ether",after,2018-09 to 2026-08,True,fails,Sharpe 0.67 did not beat the benchmark's 0.69,
+#10,Crypto cash-and-carry (doc rule: exit on negative funding),after,2023-04 to 2026-08,True,fails,"Sharpe fell from -2.44 to -5.29, more than half; Sharpe -5.29 is under 0.3; did not beat cash",
+#10 always,"Crypto cash-and-carry, never exit",after,2023-04 to 2026-08,True,holds up,,
+#3 fund,MTUM (real fund),full,2013-05 to 2026-08,True,fails,Sharpe 0.85 did not beat the benchmark's 0.90,
+#6 fund,USMV (real fund),full,2011-11 to 2026-08,True,fails,Sharpe 0.91 did not beat the benchmark's 0.97,
+#7 fund,QUAL (real fund),full,2013-08 to 2026-08,True,fails,Sharpe 0.84 did not beat the benchmark's 0.87,
+Bot A,"Full bot: trend, momentum, defensive, carry",full,2017-05 to 2026-08,True,fails,Sharpe -0.36 did not beat the benchmark's 0.82; did not beat cash,
+Bot A2,Second try: Bot A with carry never exiting,full,2017-05 to 2026-08,True,holds up,,
+Bot B,"Stock-only bot since 1964: #2+#8, #5, #6+#7",after,2007-02 to 2026-08,True,holds up,,
+Bot P,"Paper bot's tradable version: SPY/BIL, sector ETFs, USMV+QUAL",full,2014-08 to 2026-08,True,fails,Sharpe 0.83 did not beat the benchmark's 0.83,
