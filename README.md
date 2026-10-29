@@ -1,8 +1,10 @@
 # strategy-backtest
 
-Backtests the ten Tier 1 strategies and the combined bot from the "Top 50 Trading Strategies"
-doc (https://claude.ai/artifact/G7pSJoBEwkchuyx17VqtA6, tab "Backtest results") on free
-historical data, after trading costs.
+Backtests ten well-documented trading strategies, and a bot that combines them, on free
+historical data after trading costs: futures trend, the 10-month index filter, stock momentum,
+volatility-scaled momentum, sector ETF momentum, low volatility, quality (gross profitability),
+turn of the month, crypto trend and crypto cash-and-carry. Each one is tested on the years after
+its paper was published, because published edges shrink once people know about them.
 
 ## Run it
 
@@ -69,7 +71,7 @@ with $10,000 of paper money. Nothing talks to a broker.
 
 ## Day-trading paper bot (started 2026-10-01)
 
-Davis asked for a high-risk, many-trades version. `daytrade_bot.py` runs three published
+A high-risk, many-trades version. `daytrade_bot.py` runs three published
 intraday rules on QQQ and SPY with $25,000 of paper money ($25k is the floor a real US account
 needs to day trade freely), a third each, up to 4x leverage, flat every night:
 opening range breakout (Zarattini & Aziz 2023), VWAP trend (Zarattini & Aziz 2023) and
